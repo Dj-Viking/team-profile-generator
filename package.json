@@ -1,0 +1,36 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "generate team profile cards on an HTML page using node.js and inquirer",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "inquirer": "^7.3.3",
+    "jest": "^26.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dj-Viking/team-profile-generator.git"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "jest",
+    "inquirer",
+    "html",
+    "css",
+    "dom"
+  ],
+  "author": "Anders Ackerman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dj-Viking/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/Dj-Viking/team-profile-generator#readme"
+}
