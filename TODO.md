@@ -17,6 +17,7 @@
       - <code>getId()</code> | get value of id
       - <code>getEmail()</code> | get value of email
       - <code>getRole()</code> | each employee's have unique roles defined in their class
+    * Overriden <code>getRole()</code> functions will just but declared again with new return values instead of inherited 'Employee'
   - The three employee classes will extend Employee super constructor
     * Manager will have unique properties
       - <code>officeNumber</code>
