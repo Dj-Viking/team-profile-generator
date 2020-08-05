@@ -9,6 +9,24 @@ test("Creates Intern Object", () => {
   expect(intern.school).toEqual(expect.any(String));
 });
 
+test("Gets Intern's name", () => {
+  const intern = new Intern('Sam', '1', 'email', 'school'); 
+
+  expect(intern.getName()).toBe('Sam');
+});
+
+test("Gets Intern's id", () => {
+  const intern = new Intern('Sam', '1', 'email', 'school'); 
+
+  expect(intern.getId()).toBe('1');
+});
+
+test("Get Intern's email", () => {
+  const intern = new Intern('Sam', '1', 'email', 'school'); 
+
+  expect(intern.getEmail()).toBe('email');
+})
+
 test("Gets Intern's school", () => {
   const intern = new Intern('Sam', '1', 'email', 'school'); 
 
