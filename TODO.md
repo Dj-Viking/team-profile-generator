@@ -27,9 +27,9 @@
       - DONE <code>getGithub()</code> | get the value of github
       - DONE <code>getRole()</code> | this will override to return Engineer by default
     * Intern will have unique properties
-      - <code>school</code> | from which they are from
-      - <code>getSchool()</code> | get the value of school
-      - <code>getRole()</code> | this will override to return Intern by default
+      - DONE <code>school</code> | from which they are from
+      - DONE <code>getSchool()</code> | get the value of school
+      - DONE <code>getRole()</code> | this will override to return Intern by default
 * src/                
   - template helper code
     * Functions that will take object data and place into the HTML text areas that will need these elements generated
