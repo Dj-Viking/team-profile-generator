@@ -1,4 +1,4 @@
- * (__tests__) folder
+ * (`__tests__`) folder
   - test files as follows
       * Employee.test.js
       * Engineer.test.js
@@ -10,22 +10,22 @@
 * lib/                
   - classes
     * Employee parent class will the following properties
-      - <code>name</code>
-      - <code>id</code>
-      - <code>email</code>
-      - <code>getName()</code> | get value of name
-      - <code>getId()</code> | get value of id
-      - <code>getEmail()</code> | get value of email
-      - <code>getRole()</code> | each employee's have unique roles defined in their class
+      - DONE <code>name</code> 
+      - DONE <code>id</code> 
+      - DONE <code>email</code> 
+      - DONE <code>getName()</code> | get value of name 
+      - DONE <code>getId()</code> | get value of id
+      - DONE <code>getEmail()</code> | get value of email
+      - DONE <code>getRole()</code> | each employee's have unique roles defined in their class
     * Overriden <code>getRole()</code> functions will just but declared again with new return values instead of inherited 'Employee'
   - The three employee classes will extend Employee super constructor
     * Manager will have unique properties
       - <code>officeNumber</code>
       - <code>getRole()</code> | this will override to return Manager by default
-    * Employee will have unique properties
-      - <code>github</code> | their github username 
-      - <code>getGithub()</code> | get the value of github
-      - <code>getRole()</code> | this will override to return Engineer by default
+    * Engineer will have unique properties
+      - DONE <code>github</code> | their github username 
+      - DONE <code>getGithub()</code> | get the value of github
+      - DONE <code>getRole()</code> | this will override to return Engineer by default
     * Intern will have unique properties
       - <code>school</code> | from which they are from
       - <code>getSchool()</code> | get the value of school
