@@ -33,6 +33,7 @@
 * src/                
   - template helper code
     * Functions that will take object data and place into the HTML text areas that will need these elements generated
+    * Function that will take the template data and write the file to the dist folder.
 * Index.js            
   - runs the application
 
