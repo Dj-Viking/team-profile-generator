@@ -1,6 +1,7 @@
 const Manager = require('../lib/Manager');
 const Engineer = require('../lib/Engineer');
 const Intern = require('../lib/Intern');
+// const importedObj = require('../index.js');
 
 const manager = new Manager('Don', '1', 'email@mail.com', '123-123-1232');
 const engineer = new Engineer('Jim', '2', 'email@mail.com', 'github');
@@ -11,6 +12,15 @@ const tempArray = [
     engineer,
     intern
 ]
+
+// const noManagerArr = [
+//   engineer,
+//   intern,
+// ]
+
+const importedObj = {
+  employees: [engineer, intern, manager]
+}
 
 test("checks if the filter() is filtering out the Manager index", () => {
   let array = tempArray.filter(index => {
@@ -32,3 +42,11 @@ test("checks if the filter() is filtering out the Intern index", () => {
   });
   expect(array[0] instanceof Intern).toBe(tempArray[2] instanceof Intern);
 });
+
+test("Checks if imported object doesn't find the target instance and returns empty string ''", () => {
+  loopFilter = () => {
+    
+  loopFilter();
+  // expect(loopFilter()).toBe('');
+  }
+})

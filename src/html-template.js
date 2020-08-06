@@ -3,7 +3,155 @@ const Manager = require('../lib/Manager.js');
 const Engineer = require('../lib/Engineer.js');
 const Intern = require('../lib/Intern.js');
 
-const templateArray = [];
+const manager = new Manager("bob", '1', 'email', '123-123-1231')
+const engineer = new Engineer('Jim', '2', 'email@mail.com', 'github');
+const intern = new Intern('Julie', '3', 'email@mail.com', 'Vanderbilt');
+
+// const importedObj = {
+//   employees: [manager, manager, engineer, intern]
+// }
+
+// const employeeDataImport = {
+//   employees: employeeData.employees
+// }
+//generate Manager card function
+const data = {
+  employees: employeeData.employees
+}
+
+console.log(employeeData);
+//generate overall template
+//maybe have to map from an array of HTML employee templates
+// for every string template in the array
+generateFile = data => {
+  
+
+  
+  const templateManager = () => {
+    for (let i = 0; i < data.employees.length; i++) {
+      data.employees.filter(index => index instanceof Manager)
+      .map(index => {
+        return `
+      <div class="card">
+        <div class="card-title">
+          <p>
+            ${index.getName()}
+          </p>
+          <p>
+            ${index.getRole()}
+          </p>
+        </div>
+        <div class="card-description">
+          <p>
+            ID: ${index.getId()}
+          </p>
+          <p>
+            Email: ${index.getEmail()}
+          </p>
+          <p>
+            Office Number: ${index.getOfficeNum()}
+          </p>
+        </div>
+      </div>
+        `
+      }).join('')
+    }
+  }
+  // templateManager();
+  
+  //generate Engineer card function
+  const templateEng = () => {
+    
+    data.employees.filter(index => index instanceof Engineer)
+    .map(index => {
+      return `
+    <div class="card">
+      <div class="card-title">
+        <p>
+          ${index.getName()}
+        </p>
+        <p>
+          ${index.getRole()}
+        </p>
+      </div>
+      <div class="card-description">
+        <p>
+          ID: ${index.getId()}
+        </p>
+        <p>
+          Email: ${index.getEmail()}
+        </p>
+        <p>
+          GitHub: ${index.getGithub()}
+        </p>
+      </div>
+    </div>
+      `;
+    }).join('');
+  }
+  
+  //generate Intern card function
+  const templateIntern = () => {
+    
+    data.employees.filter(index => index instanceof Intern)
+    .map(index => {
+  
+      return `
+    <div class="card">
+      <div class="card-title">
+        <p>
+          ${index.getName()}
+        </p>
+        <p>
+          ${index.getRole()}
+        </p>
+      </div>
+      <div class="card-description">
+        <p>
+          ID: ${index.getId()}
+        </p>
+        <p>
+          Email: ${index.getEmail()}
+        </p>
+        <p>
+          School: ${index.getSchool()}
+        </p>
+      </div>
+    </div>
+      `
+    }).join('');
+  }
+  return console.log(`
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creating template</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        Our Company Team
+      </h1>
+    </header>
+    <section class="card-container">
+      ${templateManager()}
+      ${templateEng()}
+      ${templateIntern()}
+    </section>
+  </body>
+</html>
+  `);
+
+}
+// generateFile(importedObj);
+
+module.exports = {generateFile};
+
+
+
 //essentially should contain ALL entries even if we add 100 people
 // the questions will not stop until the prompt gets the answer
 // that the user doesn't want to add anymore employees
@@ -17,121 +165,3 @@ const templateArray = [];
 
 //filter the array of objects to their specified functions
 // by what their job roles are
-
-//generate Manager card function
-const templateManager = data => {
-  data = {
-    employees: employeeData.employees
-  };
-  let managerArr;
-  managerArr = employeeData.employees.filter(index => {
-    return index instanceof Manager;
-  });
-  console.log(managerArr);
-
-  return console.log(`
-  <div class="card">
-  <div class="card-title">
-    <p>
-      ${managerArr[0].getName()}
-    </p>
-    <p>
-      ${managerArr[0].getRole()}
-    </p>
-  </div>
-  <div class="card-description">
-    <p>
-      ID: ${managerArr[0].getId()}
-    </p>
-    <p>
-      Email: ${managerArr[0].getEmail()}
-    </p>
-    <p>
-      Office Number: ${managerArr[0].getOfficeNum()}
-    </p>
-  </div>
-</div>
-  `);
-}
-
-
-//generate Engineer card function
-const templateEng = data => {
-  data = {
-    employees: employeeData.employees
-  };
-  let engArr;
-  engArr = employeeData.employees.filter(index => {
-    return index instanceof Engineer;
-  });
-  console.log(engArr);
-
-  return /*console.log(*/`
-  <div class="card">
-  <div class="card-title">
-    <p>
-      ${engArr[0].getName()}
-    </p>
-    <p>
-      ${engArr[0].getRole()}
-    </p>
-  </div>
-  <div class="card-description">
-    <p>
-      ID: ${engArr[0].getId()}
-    </p>
-    <p>
-      Email: ${engArr[0].getEmail()}
-    </p>
-    <p>
-      GitHub: ${engArr[0].getOfficeNum()}
-    </p>
-  </div>
-</div>
-  `/*)*/;
-}
-//generate Intern card function
-const templateIntern = data => {
-  data = {
-    employees: employeeData.employees
-  };
-  let internArr;
-  internArr = employeeData.employees.filter(index => {
-    return index instanceof Intern;
-  });
-  console.log(internArr);
-
-  return /*console.log(*/`
-  <div class="card">
-  <div class="card-title">
-    <p>
-      ${internArr[0].getName()}
-    </p>
-    <p>
-      ${internArr[0].getRole()}
-    </p>
-  </div>
-  <div class="card-description">
-    <p>
-      ID: ${internArr[0].getId()}
-    </p>
-    <p>
-      Email: ${internArr[0].getEmail()}
-    </p>
-    <p>
-      School: ${internArr[0].getOfficeNum()}
-    </p>
-  </div>
-</div>
-  `/*)*/;
-}
-
-//generate overall template
-//maybe have to map from an array of HTML employee templates
-// for every string template in the array
-const overallTemplate = () => {
-
-}
-
-
-module.exports = templateManager;

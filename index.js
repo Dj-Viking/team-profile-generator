@@ -2,6 +2,7 @@ const inquirer = require('inquirer');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const templateManager = require('./src/html-template');
 
 //format of acceptable numbers 123-123-1231
 const officeNumRegex =  /((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/;	
@@ -92,7 +93,7 @@ promptEmployee = () => {
         if (emailRegex.test(email)) {
           return true;
         } else {
-          console.log(" ✨Please enter an email in this format example@email.com, .net, or .org")
+          console.log(" \n✨Please enter an email in this format example@email.com, .net, or .org")
           return false;
         }
       }
@@ -105,7 +106,7 @@ promptEmployee = () => {
     }
   ])
   .then(employeeData => {
-    console.log(employeeData);
+    //console.log(employeeData);
     //if created employee data is Manager name, id, email, officeNum
     if (employeeData.employeeType === 'Manager') {
       const manager = new Manager(employeeData.name, employeeData.id, employeeData.email, employeeData.officeNum);
@@ -121,7 +122,7 @@ promptEmployee = () => {
       const intern = new Intern(employeeData.name, employeeData.id, employeeData.email, employeeData.school);
       employeeArray.push(intern);
     }
-    console.table(employeeArray);
+    //console.table(employeeArray);
     if(employeeData.confirmAddEmployee) {
       delete employeeData.confirmAddEmployee;
       return promptEmployee();
@@ -139,10 +140,12 @@ promptEmployee = () => {
 promptEmployee()
 .then(employeeData => employeeData)
 .then(employeeData2 => {
-  const templateManager = require('./src/html-template.js');
-  templateManager(employeeData2);
- 
+  console.log(employeeData2);
+  const generateHTML = require('./src/html-template.js');
+  return (generateHTML.generateFile(employeeData2));
 })
+.then(html => console.log(html));
+
 
 
 
