@@ -7,31 +7,33 @@ const manager = new Manager("bob", '1', 'email', '123-123-1231')
 const engineer = new Engineer('Jim', '2', 'email@mail.com', 'github');
 const intern = new Intern('Julie', '3', 'email@mail.com', 'Vanderbilt');
 
-// const importedObj = {
-//   employees: [manager, manager, engineer, intern]
-// }
+const importedObj = {
+  employees: [manager, manager, engineer, intern]
+}
 
 // const employeeDataImport = {
 //   employees: employeeData.employees
 // }
 //generate Manager card function
-const data = {
-  employees: employeeData.employees
-}
+// const data = {
+//   employees: employeeData.employees
+// }
 
-console.log(employeeData);
+// console.log(employeeData);
 //generate overall template
 //maybe have to map from an array of HTML employee templates
 // for every string template in the array
-generateFile = data => {
-  
+const generateFile = data => {
+  data = {
+    employees: importedObj.employees
+  }
 
   
   const templateManager = () => {
-    for (let i = 0; i < data.employees.length; i++) {
+    // for (let i = 0; i < data.employees.length; i++) {
       data.employees.filter(index => index instanceof Manager)
       .map(index => {
-        return `
+        return console.log(`
       <div class="card">
         <div class="card-title">
           <p>
@@ -54,10 +56,10 @@ generateFile = data => {
         </div>
       </div>
         `
-      }).join('')
-    }
+      )}).join('')
+    //}
   }
-  // templateManager();
+  //templateManager();
   
   //generate Engineer card function
   const templateEng = () => {
@@ -146,7 +148,7 @@ generateFile = data => {
   `);
 
 }
-// generateFile(importedObj);
+generateFile(importedObj);
 
 module.exports = {generateFile};
 
