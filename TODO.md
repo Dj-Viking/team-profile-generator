@@ -1,9 +1,9 @@
  * (`__tests__`) folder
   - test files as follows
-      * Employee.test.js
-      * Engineer.test.js
-      * Intern.test.js
-      * Manager.test.js
+      * DONE Employee.test.js
+      * DONE Engineer.test.js
+      * DONE Intern.test.js
+      * DONE Manager.test.js
 * dist folder                            
   - rendered output (HTML) 
   - and CSS style sheet

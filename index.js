@@ -19,8 +19,6 @@ promptEmployee = () => {
   console.log(`
 ✨¸¸.•*¨*•♫♪¸¸.•*¸¸.•*¨*•♫♪¸¸.•*✨
   `)
-
-
   return inquirer.prompt([
     {
       type: 'list',
@@ -129,12 +127,23 @@ promptEmployee = () => {
       return promptEmployee();
     } else {
       delete employeeData.confirmAddEmployee;
+      employeeData.employees = employeeArray;
+      module.exports = {
+        employees: employeeData.employees
+      };
       return employeeData;
     }
   })
 }
 
-promptEmployee();
+promptEmployee()
+.then(employeeData => employeeData)
+.then(employeeData2 => {
+  const templateManager = require('./src/html-template.js');
+  templateManager(employeeData2);
+ 
+})
+
 
 
 
