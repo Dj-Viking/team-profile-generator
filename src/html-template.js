@@ -19,7 +19,7 @@ const templateArray = [];
 // by what their job roles are
 
 //generate Manager card function
-const templateManager = (data) => {
+const templateManager = data => {
   data = {
     employees: employeeData.employees
   };
@@ -56,7 +56,7 @@ const templateManager = (data) => {
 
 
 //generate Engineer card function
-const templateEng = (data) => {
+const templateEng = data => {
   data = {
     employees: employeeData.employees
   };
@@ -84,14 +84,14 @@ const templateEng = (data) => {
       Email: ${engArr[0].getEmail()}
     </p>
     <p>
-      Office Number: ${engArr[0].getOfficeNum()}
+      GitHub: ${engArr[0].getOfficeNum()}
     </p>
   </div>
 </div>
   `/*)*/;
 }
 //generate Intern card function
-const templateIntern = (data) => {
+const templateIntern = data => {
   data = {
     employees: employeeData.employees
   };
@@ -119,7 +119,7 @@ const templateIntern = (data) => {
       Email: ${internArr[0].getEmail()}
     </p>
     <p>
-      Office Number: ${internArr[0].getOfficeNum()}
+      School: ${internArr[0].getOfficeNum()}
     </p>
   </div>
 </div>
