@@ -70,27 +70,27 @@ generateFile = data => {
     ${data.employees.filter(index => index instanceof Engineer)
     .map(index => {
       return `
-    <div class="card">
-      <div class="card-title">
-        <p>
-          ${index.getName()}
-        </p>
-        <p>
-          ${index.getRole()}
-        </p>
+      <div class="card">
+        <div class="card-title">
+          <p>
+            ${index.getName()}
+          </p>
+          <p>
+            ${index.getRole()}
+          </p>
+        </div>
+        <div class="card-description">
+          <p>
+            ID: ${index.getId()}
+          </p>
+          <p>
+            Email: ${index.getEmail()}
+          </p>
+          <p>
+            GitHub: ${index.getGithub()}
+          </p>
+        </div>
       </div>
-      <div class="card-description">
-        <p>
-          ID: ${index.getId()}
-        </p>
-        <p>
-          Email: ${index.getEmail()}
-        </p>
-        <p>
-          GitHub: ${index.getGithub()}
-        </p>
-      </div>
-    </div>
       `;
     }).join('')}`
   }
@@ -102,27 +102,27 @@ generateFile = data => {
     .map(index => {
   
       return `
-    <div class="card">
-      <div class="card-title">
-        <p>
-          ${index.getName()}
-        </p>
-        <p>
-          ${index.getRole()}
-        </p>
+      <div class="card">
+        <div class="card-title">
+          <p>
+            ${index.getName()}
+          </p>
+          <p>
+            ${index.getRole()}
+          </p>
+        </div>
+        <div class="card-description">
+          <p>
+            ID: ${index.getId()}
+          </p>
+          <p>
+            Email: ${index.getEmail()}
+          </p>
+          <p>
+            School: ${index.getSchool()}
+          </p>
+        </div>
       </div>
-      <div class="card-description">
-        <p>
-          ID: ${index.getId()}
-        </p>
-        <p>
-          Email: ${index.getEmail()}
-        </p>
-        <p>
-          School: ${index.getSchool()}
-        </p>
-      </div>
-    </div>
       `
     }).join('')}`
   }
