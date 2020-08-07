@@ -136,6 +136,7 @@ promptEmployee = () => {
     }
   })
 }
+const writeHTML = require('./src/write-html.js');
 
 promptEmployee()
 .then(employeeData => employeeData)
@@ -144,7 +145,10 @@ promptEmployee()
   const generateHTML = require('./src/html-template.js');
   return (generateHTML.generateFile(employeeData2));
 })
-.then(html => console.log(html));
+.then(html => {
+  return writeHTML.writeFile(html);
+})
+.catch(err => console.log(err));
 
 
 

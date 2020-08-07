@@ -43,10 +43,3 @@ test("checks if the filter() is filtering out the Intern index", () => {
   expect(array[0] instanceof Intern).toBe(tempArray[2] instanceof Intern);
 });
 
-test("Checks if imported object doesn't find the target instance and returns empty string ''", () => {
-  loopFilter = () => {
-    
-  loopFilter();
-  // expect(loopFilter()).toBe('');
-  }
-})

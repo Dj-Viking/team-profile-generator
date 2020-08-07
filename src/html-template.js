@@ -3,13 +3,15 @@ const Manager = require('../lib/Manager.js');
 const Engineer = require('../lib/Engineer.js');
 const Intern = require('../lib/Intern.js');
 
-const manager = new Manager("bob", '1', 'email', '123-123-1231')
-const engineer = new Engineer('Jim', '2', 'email@mail.com', 'github');
-const intern = new Intern('Julie', '3', 'email@mail.com', 'Vanderbilt');
+// mock object instances
+// const manager = new Manager("bob", '1', 'email', '123-123-1231')
+// const engineer = new Engineer('Jim', '2', 'email@mail.com', 'github');
+// const intern = new Intern('Julie', '3', 'email@mail.com', 'Vanderbilt');
 
-const importedObj = {
-  employees: [manager, manager, engineer, intern]
-}
+//mock imported array of object instances
+// const importedObj = {
+//   employees: [manager, manager, engineer, intern]
+// }
 
 // const employeeDataImport = {
 //   employees: employeeData.employees
@@ -23,17 +25,18 @@ const importedObj = {
 //generate overall template
 //maybe have to map from an array of HTML employee templates
 // for every string template in the array
-const generateFile = data => {
-  data = {
-    employees: importedObj.employees
-  }
+generateFile = data => {
+  // data = {//mock data import
+  //   employees: employeeData.employees
+  // }
 
   
   const templateManager = () => {
     // for (let i = 0; i < data.employees.length; i++) {
-      data.employees.filter(index => index instanceof Manager)
+      return `
+      ${data.employees.filter(index => index instanceof Manager)
       .map(index => {
-        return console.log(`
+        return `
       <div class="card">
         <div class="card-title">
           <p>
@@ -56,15 +59,15 @@ const generateFile = data => {
         </div>
       </div>
         `
-      )}).join('')
+      }).join('')}`
     //}
   }
   //templateManager();
   
   //generate Engineer card function
   const templateEng = () => {
-    
-    data.employees.filter(index => index instanceof Engineer)
+    return `
+    ${data.employees.filter(index => index instanceof Engineer)
     .map(index => {
       return `
     <div class="card">
@@ -89,13 +92,13 @@ const generateFile = data => {
       </div>
     </div>
       `;
-    }).join('');
+    }).join('')}`
   }
   
   //generate Intern card function
   const templateIntern = () => {
-    
-    data.employees.filter(index => index instanceof Intern)
+    return `
+    ${data.employees.filter(index => index instanceof Intern)
     .map(index => {
   
       return `
@@ -121,9 +124,9 @@ const generateFile = data => {
       </div>
     </div>
       `
-    }).join('');
+    }).join('')}`
   }
-  return console.log(`
+  return `
   <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -145,10 +148,10 @@ const generateFile = data => {
     </section>
   </body>
 </html>
-  `);
+  `;
 
 }
-generateFile(importedObj);
+// generateFile(importedObj);
 
 module.exports = {generateFile};
 
