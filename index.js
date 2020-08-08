@@ -143,7 +143,7 @@ const writeHTML = require('./src/write-html.js');
 promptEmployee()
 .then(employeeData => employeeData)
 .then(employeeData2 => {
-  console.log(employeeData2);
+  //console.log(employeeData2);
   const generateHTML = require('./src/html-template.js');
   return (generateHTML.generateFile(employeeData2));
 })

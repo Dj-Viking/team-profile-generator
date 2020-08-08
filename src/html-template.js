@@ -34,27 +34,27 @@ generateFile = data => {
   const templateManager = () => {
     // for (let i = 0; i < data.employees.length; i++) {
       return `
-      ${data.employees.filter(index => index instanceof Manager)
-      .map(index => {
+      ${data.employees.filter(item => item instanceof Manager)
+      .map(item => {
         return `
       <div class="card">
         <div class="card-title">
           <p>
-            ${index.getName()}
+            ${item.getName()}
           </p>
           <p class="italic-custom">
-          <span class="oi oi-person"></span>${index.getRole()}
+          <span class="oi oi-person"></span>${item.getRole()}
           </p>
         </div>
         <div class="card-description">
           <p>
-            ID: ${index.getId()}
+            ID: ${item.getId()}
           </p>
           <p>
-            <span>Email: <a href="mailto:${index.getEmail()}">${index.getEmail()}</a></span>
+            <span>Email: <a href="mailto:${item.getEmail()}">${item.getEmail()}</a></span>
           </p>
           <p>
-            Office Number: ${index.getOfficeNum()}
+            Office Number: ${item.getOfficeNum()}
           </p>
         </div>
       </div>
@@ -67,27 +67,27 @@ generateFile = data => {
   //generate Engineer card function
   const templateEng = () => {
     return `
-    ${data.employees.filter(index => index instanceof Engineer)
-    .map(index => {
+    ${data.employees.filter(item => item instanceof Engineer)
+    .map(item => {
       return `
       <div class="card">
         <div class="card-title">
           <p>
-            ${index.getName()}
+            ${item.getName()}
           </p>
           <p class="italic-custom">
-          <span class="oi oi-wrench"></span>${index.getRole()}
+          <span class="oi oi-wrench"></span>${item.getRole()}
           </p>
         </div>
         <div class="card-description">
           <p>
-            ID: ${index.getId()}
+            ID: ${item.getId()}
           </p>
           <p>
-            <span>Email: <a href="mailto:${index.getEmail()}">${index.getEmail()}</a></span>
+            <span>Email: <a href="mailto:${item.getEmail()}">${item.getEmail()}</a></span>
           </p>
           <p>
-            GitHub: <a href="http://github.com/${index.getGithub()}">${index.getGithub()}</a>
+            <span>GitHub: <a href="http://github.com/${item.getGithub()}">${item.getGithub()}</a></span>
           </p>
         </div>
       </div>
@@ -98,28 +98,28 @@ generateFile = data => {
   //generate Intern card function
   const templateIntern = () => {
     return `
-    ${data.employees.filter(index => index instanceof Intern)
-    .map(index => {
+    ${data.employees.filter(item => item instanceof Intern)
+    .map(item => {
   
       return `
       <div class="card">
         <div class="card-title">
           <p>
-            ${index.getName()}
+            ${item.getName()}
           </p>
           <p class="italic-custom">
-          <span class="oi oi-book"></span>${index.getRole()}
+          <span class="oi oi-book"></span>${item.getRole()}
           </p>
         </div>
         <div class="card-description">
           <p>
-            ID: ${index.getId()}
+            ID: ${item.getId()}
           </p>
           <p>
-            Email: <a href="mailto:${index.getEmail()}">${index.getEmail()}</a>
+            <span>Email: <a href="mailto:${item.getEmail()}">${item.getEmail()}</a></span>
           </p>
           <p>
-            School: ${index.getSchool()}
+            School: ${item.getSchool()}
           </p>
         </div>
       </div>
