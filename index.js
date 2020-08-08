@@ -9,17 +9,19 @@ const officeNumRegex =  /((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/;
 
 const emailRegex = /\w+@\w+\.(net|com|org)/;
 
+
+
 const employeeArray = [];
 
 promptEmployee = () => {
 
-  console.log("\x1b[36m", `
-✨¸¸.•*¨*•♫♪¸¸.•*¸¸.•*¨*•♫♪¸¸.•*✨
-`)
-  console.log("   Team Profile Generator 1.0.0");
-  console.log(`
-✨¸¸.•*¨*•♫♪¸¸.•*¸¸.•*¨*•♫♪¸¸.•*✨
-  `)
+  console.log("\x1b[33m",`
+ ✨¸¸.•*¨*•♫♪¸¸.•*¸¸.•*¨*•♫♪¸¸.•*✨
+`);
+console.log("\x1b[36m",`✨ Team Profile Generator 1.0.0 ✨`);
+  console.log("\x1b[33m", ` 
+ ✨¸¸.•*¨*•♫♪¸¸.•*¸¸.•*¨*•♫♪¸¸.•*✨
+  `);
   return inquirer.prompt([
     {
       type: 'list',
@@ -146,6 +148,13 @@ promptEmployee()
   return (generateHTML.generateFile(employeeData2));
 })
 .then(html => {
+  console.log("\x1b[33m", `
+ ✨¸¸.•*¨*•♫♪¸¸.•*¸¸.•*¨*•♫♪¸¸.•*¸¸.•*¨*•♫♪¸¸.•*¸¸✨
+`);console.log("\x1b[32m", 
+"✨ HTML Page Generated! Check the ./dist folder! ✨");
+  console.log("\x1b[33m", `
+ ✨¸¸.•*¨*•♫♪¸¸.•*¸¸.•*¨*•♫♪¸¸.•*¸¸.•*¨*•♫♪¸¸.•*¸¸✨
+`, "\x1b[00m")
   return writeHTML.writeFile(html);
 })
 .catch(err => console.log(err));

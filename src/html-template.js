@@ -42,8 +42,8 @@ generateFile = data => {
           <p>
             ${index.getName()}
           </p>
-          <p>
-            ${index.getRole()}
+          <p class="italic-custom">
+          <span class="oi oi-person"></span>${index.getRole()}
           </p>
         </div>
         <div class="card-description">
@@ -51,7 +51,7 @@ generateFile = data => {
             ID: ${index.getId()}
           </p>
           <p>
-            Email: ${index.getEmail()}
+            <span>Email: <a href="mailto:${index.getEmail()}">${index.getEmail()}</a></span>
           </p>
           <p>
             Office Number: ${index.getOfficeNum()}
@@ -75,8 +75,8 @@ generateFile = data => {
           <p>
             ${index.getName()}
           </p>
-          <p>
-            ${index.getRole()}
+          <p class="italic-custom">
+          <span class="oi oi-wrench"></span>${index.getRole()}
           </p>
         </div>
         <div class="card-description">
@@ -84,10 +84,10 @@ generateFile = data => {
             ID: ${index.getId()}
           </p>
           <p>
-            Email: ${index.getEmail()}
+            <span>Email: <a href="mailto:${index.getEmail()}">${index.getEmail()}</a></span>
           </p>
           <p>
-            GitHub: ${index.getGithub()}
+            GitHub: <a href="http://github.com/${index.getGithub()}">${index.getGithub()}</a>
           </p>
         </div>
       </div>
@@ -107,8 +107,8 @@ generateFile = data => {
           <p>
             ${index.getName()}
           </p>
-          <p>
-            ${index.getRole()}
+          <p class="italic-custom">
+          <span class="oi oi-book"></span>${index.getRole()}
           </p>
         </div>
         <div class="card-description">
@@ -116,7 +116,7 @@ generateFile = data => {
             ID: ${index.getId()}
           </p>
           <p>
-            Email: ${index.getEmail()}
+            Email: <a href="mailto:${index.getEmail()}">${index.getEmail()}</a>
           </p>
           <p>
             School: ${index.getSchool()}
@@ -133,6 +133,7 @@ generateFile = data => {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>creating template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>

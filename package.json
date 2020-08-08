@@ -12,7 +12,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "jest"
+    "test": "jest --verbose",
+    "start": "node ."
   },
   "repository": {
     "type": "git",

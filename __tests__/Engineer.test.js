@@ -37,4 +37,11 @@ test("Gets engineer's github", () => {
   const engineer = new Engineer('Dave', '1', 'email', 'github');
 
   expect(engineer.getGithub()).toBe('github');
-})
+});
+
+test("Checks to see if making the github username to lowercase works", () => {
+  const engineer = new Engineer('Dave', '1', 'email', 'GitHub');
+
+  expect(engineer.getGithub()).toBe('github');
+  //github.toLowerCase() is now in the constructor
+});
