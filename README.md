@@ -27,11 +27,13 @@ Generate a Team Roster of employees as cards within an HTML page generated dynam
 
 ## Usage
 
-link coming soon
+* Link to Installation walkthrough below! 👇
+
+https://youtu.be/b1J59begDyw
 
 ## Testing
 
-Once the program has the dependencies installed, run this shell script to run the Jest test script. 
+Once the program has the dependencies installed, run this shell script to run the Jest test script:
 
 <code>npm test</code>
 
