@@ -87,7 +87,7 @@ generateFile = data => {
             <span>Email: <a href="mailto:${item.getEmail()}">${item.getEmail()}</a></span>
           </p>
           <p>
-            <span>GitHub: <a href="http://github.com/${item.getGithub()}">${item.getGithub()}</a></span>
+            <span>GitHub: <a target "_blank" href="http://github.com/${item.getGithub()}">${item.getGithub()}</a></span>
           </p>
         </div>
       </div>
@@ -116,7 +116,7 @@ generateFile = data => {
             ID: ${item.getId()}
           </p>
           <p>
-            <span>Email: <a href="mailto:${item.getEmail()}">${item.getEmail()}</a></span>
+            <span>Email: <a target="_blank" href="mailto:${item.getEmail()}">${item.getEmail()}</a></span>
           </p>
           <p>
             School: ${item.getSchool()}
