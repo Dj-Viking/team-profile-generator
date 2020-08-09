@@ -116,7 +116,7 @@ generateFile = data => {
             ID: ${item.getId()}
           </p>
           <p>
-            <span>Email: <a target="_blank" href="mailto:${item.getEmail()}">${item.getEmail()}</a></span>
+            <span>Email: <a href="mailto:${item.getEmail()}">${item.getEmail()}</a></span>
           </p>
           <p>
             School: ${item.getSchool()}
