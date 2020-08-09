@@ -19,9 +19,9 @@ Generate a Team Roster of employees as cards within an HTML page generated dynam
 
 ## Installation
 
-* To install this project, just type the shell:
+* To install this project, just type the shell script:
 
-<code>script npm install</code> 
+<code>npm install</code> 
 
 * This will gather all dependencies required to run the application. this should install both Inquirer and Jest.
 
