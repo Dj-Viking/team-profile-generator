@@ -7,7 +7,7 @@ const templateManager = require('./src/html-template');
 //format of acceptable numbers 123-123-1231
 const officeNumRegex =  /((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/;	
 
-const emailRegex = /\w+@\w+\.(net|com|org)/;
+const emailRegex = /\w+@\w+\.(net|com|org|edu)/;
 
 
 
